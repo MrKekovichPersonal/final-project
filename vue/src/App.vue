@@ -120,9 +120,11 @@ onMounted(() => {
     <tr>
       <th scope="col" colspan="8">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search" v-model="searchField">
+          <input type="text" class="form-control" placeholder="Search By Full Name" v-model="searchField">
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="submit" @click.prevent="getEmployees">Button</button>
+            <button class="btn btn-outline-secondary" type="submit" @click.prevent="getEmployees">
+              <img src="./assets/search-svgrepo-com.svg" alt="search icon" width="30" height="20">
+            </button>
           </div>
         </div>
       </th>
