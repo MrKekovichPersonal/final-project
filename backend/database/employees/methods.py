@@ -6,6 +6,10 @@ from backend.database.main import Database
 session = Database().session
 
 
+def as_dict(employees):
+    return [employee.as_dict() for employee in employees]
+
+
 @eel.expose
 def create(full_name: str,
            phone_number: str = None,
@@ -22,21 +26,23 @@ def create(full_name: str,
 
 @eel.expose
 def get_by_id(employee_id: int):
-    return session.query(Employee).filter(Employee.employee_id == employee_id).first().as_dict()
+    return (session.query(Employee)
+            .filter(Employee.employee_id == employee_id).first()
+            .as_dict())
 
 
 @eel.expose
 def get(limit: int = None):
     if limit is None:
-        return session.query(Employee).all()
+        return as_dict(session.query(Employee).all())
 
-    return session.query(Employee).limit(limit).all()
+    return as_dict(session.query(Employee).limit(limit).all())
 
 
 @eel.expose
 def get_like(field: str, value: str):
     field = getattr(Employee, field)
-    return session.query(Employee).filter(field.like(value)).all()
+    return as_dict(session.query(Employee).filter(field.like(value)).all())
 
 
 @eel.expose
