@@ -42,7 +42,7 @@ def get(limit: int = None):
 @eel.expose
 def get_like(field: str, value: str):
     field = getattr(Employee, field)
-    return as_dict(session.query(Employee).filter(field.like(value)).all())
+    return as_dict(session.query(Employee).filter(field.like(f'%{value}%')).all())
 
 
 @eel.expose

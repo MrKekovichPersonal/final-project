@@ -7,6 +7,7 @@ const loading = ref(false)
 const checked = ref([])
 const creationMode = ref(false)
 const isClicked = ref(true)
+const searchField = ref("")
 
 const fullName = ref("")
 const phoneNumber = ref("")
@@ -15,7 +16,13 @@ const salary = ref("")
 
 async function getEmployees() {
   loading.value = true
-  employees.value = await eel.get()()
+  if (searchField.value === "") {
+    employees.value = await eel.get()()
+    loading.value = false
+    isClicked.value = !isClicked;
+    return
+  }
+  employees.value = await eel.get_like("full_name", searchField.value)()
   loading.value = false
   isClicked.value = !isClicked;
 }
@@ -107,6 +114,17 @@ onMounted(() => {
       </th>
       <th class="btn-danger" @click="creationMode = false; emptyFields()">
         <img src="./assets/cancel-svgrepo-com.svg" alt="cancel icon" width="30" height="30">
+      </th>
+    </tr>
+    <!--  search field  -->
+    <tr>
+      <th scope="col" colspan="8">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search" v-model="searchField">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit" @click.prevent="getEmployees">Button</button>
+          </div>
+        </div>
       </th>
     </tr>
     <!--  header  -->
