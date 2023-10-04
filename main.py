@@ -7,5 +7,5 @@ from backend.database.employees.methods import (create,
                                                 delete_many)
 
 if __name__ == '__main__':
-    eel.init('web/')
+    eel.init('frontend/')
     eel.start('index.html')
