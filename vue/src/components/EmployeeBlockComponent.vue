@@ -32,8 +32,8 @@ async function switchEditMode() {
 }
 
 async function validateInput() {
-  return !(fullName.value.length === 0 ||
-      (isNaN(parseFloat(salary.value))));
+  return !(props.employee['full_name'].length === 0 ||
+      (isNaN(parseFloat(props.employee['salary']))));
 }
 
 async function editEmployee() {
@@ -45,7 +45,7 @@ async function editEmployee() {
   fullName.value = props.employee['full_name']
   phoneNumber.value = props.employee['phone_number']
   emailAddress.value = props.employee['email_address']
-  salary.value = props.employee['salary']
+  salary.value = parseFloat(props.employee['salary'])
 
   eel.edit(
       props.employee['employee_id'],

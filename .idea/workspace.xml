@@ -5,23 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05148f17-ca61-4556-a5fc-496b718d8c6c" name="Changes" comment="front almost works">
-      <change afterPath="$PROJECT_DIR$/vue/src/assets/accept-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/assets/cancel-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/assets/pen-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/assets/plus-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/assets/save-icon-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/assets/trash-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/cancel-svgrepo-com-c24d8191.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/pen-svgrepo-com-10833825.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/plus-svgrepo-com-70c42e58.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/save-icon-svgrepo-com-911d2be7.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/trash-icon-66f67c4b.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/assets/refresh-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/refresh-svgrepo-com-e4db4db0.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/components/EmployeeBlockComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/EmployeeBlockComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/index-996503e5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/index-e34bc3ea.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +58,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;add__front&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/stask/PycharmProjects/General Python/final-project/vue/public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/stask/PycharmProjects/General Python/final-project/vue/src/assets&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -86,6 +76,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\stask\PycharmProjects\General Python\final-project\vue\src\assets" />
       <recent name="C:\Users\stask\PycharmProjects\General Python\final-project\vue\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -142,6 +133,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -158,6 +150,8 @@
       <workItem from="1696357967486" duration="2764000" />
       <workItem from="1696392413680" duration="5366000" />
       <workItem from="1696397813082" duration="5030000" />
+      <workItem from="1696408572835" duration="1308000" />
+      <workItem from="1696410076345" duration="587000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -207,6 +201,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="front almost works" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/final_project$main.coverage" NAME="main Coverage Results" MODIFIED="1696406414246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project$main.coverage" NAME="main Coverage Results" MODIFIED="1696410179505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

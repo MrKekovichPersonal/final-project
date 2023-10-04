@@ -6,6 +6,7 @@ const employees = ref([])
 const loading = ref(false)
 const checked = ref([])
 const creationMode = ref(false)
+const isClicked = ref(true)
 
 const fullName = ref("")
 const phoneNumber = ref("")
@@ -16,6 +17,7 @@ async function getEmployees() {
   loading.value = true
   employees.value = await eel.get()()
   loading.value = false
+  isClicked.value = !isClicked;
 }
 
 async function validateInput() {
@@ -40,7 +42,7 @@ async function createEmployee() {
       fullName.value,
       phoneNumber.value,
       emailAddress.value,
-      salary.value
+      parseFloat(salary.value)
   )()
   emptyFields()
   await getEmployees()
@@ -70,11 +72,16 @@ onMounted(() => {
   <table class="table table-bordered table-hover">
     <thead>
     <tr>
-      <th colspan="4" class="btn-success" @click="creationMode = true; emptyFields()">
+      <th colspan="3" class="btn-success" @click="creationMode = true; emptyFields()">
         <img src="./assets/plus-svgrepo-com.svg" alt="plus icon" width="30" height="30">
       </th>
-      <th colspan="4" class="btn-danger" @click="deleteSelected">
+      <th colspan="3" class="btn-danger" @click="deleteSelected">
         Delete selected
+      </th>
+      <th colspan="2" class="btn-primary" @click="getEmployees">
+        <img src="./assets/refresh-svgrepo-com.svg" class="refresh-icon" :class="{ 'click': isClicked }"
+             alt="refresh icon" width="30"
+             height="30">
       </th>
     </tr>
     <!--  creation mode  -->
@@ -143,5 +150,19 @@ onMounted(() => {
 </template>
 
 <style scoped>
+@keyframes spin-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+.refresh-icon.click {
+  animation-name: spin-animation;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 </style>
