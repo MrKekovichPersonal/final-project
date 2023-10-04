@@ -2,6 +2,19 @@
 
 import {onMounted, ref} from "vue";
 
+const props = defineProps({
+  employee: Object
+})
+
+const $emit = defineEmits(['delete'])
+
+onMounted(() => {
+  fullName.value = props.employee['full_name']
+  phoneNumber.value = props.employee['phone_number']
+  emailAddress.value = props.employee['email_address']
+  salary.value = props.employee['salary']
+})
+
 const editMode = ref(false)
 
 // employees fields
@@ -18,33 +31,36 @@ async function switchEditMode() {
   editMode.value = !editMode.value
 }
 
+async function validateInput() {
+  return !(fullName.value.length === 0 ||
+      (isNaN(parseFloat(salary.value))));
+}
+
 async function editEmployee() {
-  await validateInput()
+  if (!await validateInput()) {
+    alert("Fields: full_name and salary must be filled. Salary must be a number.")
+    return
+  }
+
   fullName.value = props.employee['full_name']
   phoneNumber.value = props.employee['phone_number']
   emailAddress.value = props.employee['email_address']
   salary.value = props.employee['salary']
-  // TODO: add eel call
+
+  eel.edit(
+      props.employee['employee_id'],
+      fullName.value,
+      phoneNumber.value,
+      emailAddress.value,
+      salary.value
+  )
   editMode.value = false
 }
 
-async function validateInput() {
-  // TODO: add validation
-}
-
 async function deleteEmployee() {
-  // TODO: add eel call
+  eel.delete(props.employee['employee_id'])
+  $emit('delete')
 }
-
-const props = defineProps({
-  employee: Object
-})
-onMounted(() => {
-  fullName.value = props.employee['full_name']
-  phoneNumber.value = props.employee['phone_number']
-  emailAddress.value = props.employee['email_address']
-  salary.value = props.employee['salary']
-})
 </script>
 
 <template>
@@ -74,27 +90,26 @@ onMounted(() => {
     <input class="form-control" v-if="editMode" type="text" v-model="employee['salary']">
     <input v-else class="form-control disabled" readonly v-model="salary">
   </th>
+
   <template v-if="!editMode">
     <th class="btn-primary" @click="switchEditMode">
-      edit
+      <img src="../assets/pen-svgrepo-com.svg" alt="pen icon" width="30" height="30">
     </th>
-    <th class="btn-danger">
-      delete
+    <th class="btn-danger" @click="deleteEmployee">
+      <img src="../assets/trash-icon.svg" alt="trash icon" width="30" height="30">
     </th>
   </template>
+
   <template v-else>
     <th class="btn-success" @click="editEmployee">
-      save
+      <img src="../assets/save-icon-svgrepo-com.svg" alt="save icon" width="30" height="30">
     </th>
     <th class="btn-secondary" @click="switchEditMode">
-      cancel
+      <img src="../assets/cancel-svgrepo-com.svg" alt="cancel icon" width="30" height="30">
     </th>
   </template>
 </template>
 
 <style scoped>
-.employee {
-  display: flex;
-}
 
 </style>

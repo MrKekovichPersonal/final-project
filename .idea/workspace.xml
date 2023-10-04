@@ -4,21 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05148f17-ca61-4556-a5fc-496b718d8c6c" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/src/components/EmployeeBlockComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/index-53e0fb68.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/index-f4f56e2a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/vue.svg" afterDir="false" />
+    <list default="true" id="05148f17-ca61-4556-a5fc-496b718d8c6c" name="Changes" comment="front almost works">
+      <change afterPath="$PROJECT_DIR$/vue/src/assets/accept-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/assets/cancel-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/assets/pen-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/assets/plus-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/assets/save-icon-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/assets/trash-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/cancel-svgrepo-com-c24d8191.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/pen-svgrepo-com-10833825.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/plus-svgrepo-com-70c42e58.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/save-icon-svgrepo-com-911d2be7.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/assets/trash-icon-66f67c4b.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/employees/methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/employees/methods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/index-aaa65c3d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/index-d5f8d21b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/vue-5532db34.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vue/public/vue.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/components/EmployeeBlockComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/components/EmployeeBlockComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/index-996503e5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/index-e34bc3ea.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +88,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\stask\PycharmProjects\General Python\final-project\vue\public" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\stask\PycharmProjects\General Python\final-project\vue\src\assets" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -150,7 +156,8 @@
       <workItem from="1696352353153" duration="106000" />
       <workItem from="1696352489418" duration="4986000" />
       <workItem from="1696357967486" duration="2764000" />
-      <workItem from="1696392413680" duration="5208000" />
+      <workItem from="1696392413680" duration="5366000" />
+      <workItem from="1696397813082" duration="5030000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -168,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696352886985</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="front almost works">
+      <option name="closed" value="true" />
+      <created>1696397759404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696397759404</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,9 +203,10 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="front almost works" />
+    <option name="LAST_COMMIT_MESSAGE" value="front almost works" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/final_project$main.coverage" NAME="main Coverage Results" MODIFIED="1696397641108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project$main.coverage" NAME="main Coverage Results" MODIFIED="1696406414246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
